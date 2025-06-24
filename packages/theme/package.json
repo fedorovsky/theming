@@ -1,0 +1,35 @@
+{
+  "name": "@fedorovskyi/theme",
+  "version": "1.0.0",
+  "description": "theme",
+  "main": "./dist/tokens.js",
+  "module": "./dist/tokens.js",
+  "types": "./dist/tokens.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/tokens.js",
+      "types": "./dist/tokens.d.ts"
+    },
+    "./theme.css": "./dist/theme.css"
+  },
+  "scripts": {
+    "generate:css": "node generate-css.js",
+    "generate:tokens": "node generate-tokens.js",
+    "generate:out": "npm run generate:tokens && npm run generate:css",
+    "build:css": "postcss out/theme.css -o dist/theme.css",
+    "build:js": "tsc -p tsconfig.json",
+    "build": "npm run generate:out && npm run build:css && npm run build:js",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^7.0.7",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "typescript": "^5.8.3",
+    "prettier": "^3.5.3"
+  }
+}
