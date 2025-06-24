@@ -1,7 +1,6 @@
 import { fn } from 'storybook/test';
 
 import { PigmentCard } from '../src';
-// import { Button } from '../dist/src';
 
 export default {
   title: 'PigmentCard',
