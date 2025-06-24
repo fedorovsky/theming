@@ -1,1 +1,1 @@
-export { LinariaCard } from './components/linaria-card';
+export { PigmentCard } from './components/pigment-card';

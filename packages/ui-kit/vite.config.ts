@@ -1,22 +1,14 @@
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
-import wyw from '@wyw-in-js/vite';
+import { pigment } from '@pigment-css/vite-plugin';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
 import path from 'path';
 
 export default defineConfig({
   plugins: [
+    pigment({}),
     libInjectCss(),
     dts(),
-    wyw({
-      include: ['src/**/*.{ts,tsx}'],
-      babelOptions: {
-        presets: [
-          '@babel/preset-typescript',
-          ['@babel/preset-react', { runtime: 'automatic' }],
-        ],
-      },
-    }),
   ],
   build: {
     lib: {

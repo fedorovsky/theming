@@ -1,11 +1,11 @@
 import { fn } from 'storybook/test';
 
-import { LinariaCard } from '../src';
+import { PigmentCard } from '../src';
 // import { Button } from '../dist/src';
 
 export default {
-  title: 'LinariaCard',
-  component: LinariaCard,
+  title: 'PigmentCard',
+  component: PigmentCard,
   parameters: {
     layout: 'centered',
   },
