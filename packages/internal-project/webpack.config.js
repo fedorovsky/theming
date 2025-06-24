@@ -17,7 +17,12 @@ module.exports = {
       {
         test: /\.(ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: [
+          'babel-loader',
+          {
+            loader: '@wyw-in-js/webpack-loader',
+          },
+        ],
       },
       {
         test: /\.css$/i,
