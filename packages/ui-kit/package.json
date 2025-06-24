@@ -49,6 +49,9 @@
     "@wyw-in-js/babel-preset": "^0.7.0",
     "@fedorovskyi/theme": "^1.0.2"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist/"
   ]
