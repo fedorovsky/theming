@@ -17,7 +17,6 @@ const Title = styled('h2')({
 });
 
 export const InternalCard = () => {
-  console.log('tokens:', tokens);
   return (
     <Card>
       <Title>Internal Card</Title>

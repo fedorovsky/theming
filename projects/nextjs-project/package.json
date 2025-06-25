@@ -10,8 +10,8 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@fedorovskyi/theme": "^1.0.5",
-    "@fedorovskyi/ui-kit": "^1.0.1",
+    "@fedorovskyi/theme": "^1.0.7",
+    "@fedorovskyi/ui-kit": "^1.0.7",
     "@pigment-css/react": "^0.0.30",
     "next": "15.3.4",
     "react": "^18.2.0",
