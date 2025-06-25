@@ -45,8 +45,6 @@
   },
   "dependencies": {
     "@fedorovskyi/theme": "^1.0.7",
-    "@linaria/core": "^6.3.0",
-    "@linaria/react": "^6.3.0",
     "@pigment-css/react": "^0.0.30"
   },
   "publishConfig": {
