@@ -1,6 +1,6 @@
 {
   "name": "@fedorovskyi/theme",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "theme",
   "main": "./dist/tokens.js",
   "module": "./dist/tokens.js",
@@ -10,7 +10,7 @@
     ".": {
       "types": "./dist/tokens.d.ts",
       "import": "./dist/tokens.js",
-      "require": "./dist/tokens.cjs.js"
+      "require": "./dist/tokens.cjs"
     },
     "./theme.css": "./dist/theme.css"
   },
