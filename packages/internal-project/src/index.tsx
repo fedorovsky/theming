@@ -5,6 +5,7 @@ import { App } from './app';
 /**
  * Theme
  */
+import '@fedorovskyi/theme/theme.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(<App />);
