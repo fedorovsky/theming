@@ -12,4 +12,4 @@ export const themeLight = {
     medium: '16px',
     large: '24px',
   },
-};
+} as const;
