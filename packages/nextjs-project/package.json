@@ -6,12 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write ."
   },
   "dependencies": {
-    "@pigment-css/react": "^0.0.30",
     "@fedorovskyi/theme": "^1.0.5",
     "@fedorovskyi/ui-kit": "^1.0.1",
+    "@pigment-css/react": "^0.0.30",
     "next": "15.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -24,6 +25,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
+    "prettier": "^3.6.1",
     "typescript": "^5"
   }
 }

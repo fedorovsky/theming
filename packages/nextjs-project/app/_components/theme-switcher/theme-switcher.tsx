@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import * as React from 'react';
 import { THEMES } from './theme-constants';
@@ -21,30 +21,30 @@ export const ThemeSwitcher = () => {
 
   return (
     <div>
-        <label style={{ display: 'block', fontSize: '24px' }}>
-          <input
-            type="radio"
-            checked={theme === THEMES.LIGHT}
-            onChange={() => setTheme(THEMES.LIGHT)}
-          />
-          Light
-        </label>
-        <label style={{ display: 'block', fontSize: '24px' }}>
-          <input
-            type="radio"
-            checked={theme === THEMES.DARK}
-            onChange={() => setTheme(THEMES.DARK)}
-          />
-          Dark
-        </label>
-        <label style={{ display: 'block', fontSize: '24px' }}>
-          <input
-            type="radio"
-            checked={theme === THEMES.SYSTEM}
-            onChange={() => setTheme(THEMES.SYSTEM)}
-          />
-          System
-        </label>
+      <label style={{ display: 'block', fontSize: '24px' }}>
+        <input
+          type="radio"
+          checked={theme === THEMES.LIGHT}
+          onChange={() => setTheme(THEMES.LIGHT)}
+        />
+        Light
+      </label>
+      <label style={{ display: 'block', fontSize: '24px' }}>
+        <input
+          type="radio"
+          checked={theme === THEMES.DARK}
+          onChange={() => setTheme(THEMES.DARK)}
+        />
+        Dark
+      </label>
+      <label style={{ display: 'block', fontSize: '24px' }}>
+        <input
+          type="radio"
+          checked={theme === THEMES.SYSTEM}
+          onChange={() => setTheme(THEMES.SYSTEM)}
+        />
+        System
+      </label>
     </div>
   );
 };
