@@ -1,7 +1,7 @@
 {
-  "name": "external-project",
+  "name": "webpack-project",
   "version": "1.0.0",
-  "description": "external-project",
+  "description": "webpack-project",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --mode development",
@@ -13,7 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fedorovskyi/ui-kit": "^1.0.0",
+    "@fedorovskyi/theme": "^1.0.5",
+    "@fedorovskyi/ui-kit": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -23,6 +24,8 @@
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
     "@eslint/js": "^9.29.0",
+    "@pigment-css/theme": "^0.0.30",
+    "@pigment-css/unplugin": "^0.0.30",
     "@types/react": "^18.2.71",
     "@types/react-dom": "^18.2.22",
     "babel-loader": "^10.0.0",
