@@ -1,3 +1,1 @@
-# theme-generator
-
-theme-generator
+# theme
