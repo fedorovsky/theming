@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { webpack: PigmentPlugin, extendTheme } = require('@pigment-css/unplugin');
+const { webpack: PigmentPlugin } = require('@pigment-css/unplugin');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -32,14 +32,7 @@ module.exports = {
     }),
 
     new MiniCssExtractPlugin({ filename: '[name].css' }),
-    PigmentPlugin({
-      theme: extendTheme({
-        colors: {
-          primary: 'tomato',
-          secondary: 'cyan',
-        },
-      }),
-    }),
+    PigmentPlugin({}),
   ],
   devServer: {
     port: 3000,
