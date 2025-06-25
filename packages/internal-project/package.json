@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fedorovskyi/theme": "^1.0.2",
+    "@fedorovskyi/theme": "^1.0.3",
     "@fedorovskyi/ui-kit": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
