@@ -9,7 +9,7 @@ const Card = styled('div')({
   padding: '10px',
   maxWidth: '300px',
   backgroundColor: tokens.colors.neutral100,
-  color: tokens.colors.textNeutral100,
+  color: tokens.colors.,
 });
 
 const Title = styled('h2')<{
