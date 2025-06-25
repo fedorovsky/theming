@@ -38,8 +38,8 @@ export const PigmentCard = () => {
 
   return (
     <Card>
-      <Title color="red" size="large">Card Title</Title>
-      <Title color="red" size="small">Card Subtitle</Title>
+      <Title color="red" size="large">UI-KIT Title</Title>
+      <Title color="red" size="small">UI-KIT Subtitle</Title>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nesciunt!</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nesciunt!</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nesciunt!</p>

@@ -19,36 +19,30 @@ export const ThemeSwitcher = () => {
 
   return (
     <div>
-      <div>
-        <label>
-          <input
-            type="radio"
-            checked={theme === THEMES.LIGHT}
-            onChange={() => setTheme(THEMES.LIGHT)}
-          />
-          Light
-        </label>
-      </div>
-      <div>
-        <label>
-          <input
-            type="radio"
-            checked={theme === THEMES.DARK}
-            onChange={() => setTheme(THEMES.DARK)}
-          />
-          Dark
-        </label>
-      </div>
-      <div>
-        <label>
-          <input
-            type="radio"
-            checked={theme === THEMES.SYSTEM}
-            onChange={() => setTheme(THEMES.SYSTEM)}
-          />
-          System
-        </label>
-      </div>
+      <label style={{ display: 'block', fontSize: '24px' }}>
+        <input
+          type="radio"
+          checked={theme === THEMES.LIGHT}
+          onChange={() => setTheme(THEMES.LIGHT)}
+        />
+        Light
+      </label>
+      <label style={{ display: 'block', fontSize: '24px' }}>
+        <input
+          type="radio"
+          checked={theme === THEMES.DARK}
+          onChange={() => setTheme(THEMES.DARK)}
+        />
+        Dark
+      </label>
+      <label style={{ display: 'block', fontSize: '24px' }}>
+        <input
+          type="radio"
+          checked={theme === THEMES.SYSTEM}
+          onChange={() => setTheme(THEMES.SYSTEM)}
+        />
+        System
+      </label>
     </div>
   );
 };
