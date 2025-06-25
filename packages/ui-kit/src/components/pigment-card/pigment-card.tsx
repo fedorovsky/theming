@@ -2,14 +2,19 @@ import * as React from 'react';
 import { styled } from '@pigment-css/react';
 import { tokens } from '@fedorovskyi/theme';
 
-interface TitleProps {
-  size?: 'small' | 'large';
-}
 
-const Title = styled('h1')<TitleProps>({
-  fontSize: '24px;',
-  fontWeight: 'bold',
-  color: tokens.palette.text,
+const Card = styled('div')({
+  border: `1px solid ${tokens.colors.primary100}`,
+  borderRadius: '8px',
+  padding: '10px',
+  maxWidth: '300px',
+  backgroundColor: tokens.colors.neutral100,
+  color: tokens.colors.textNeutral100,
+});
+
+const Title = styled('h2')<{
+  size?: 'small' | 'large';
+}>({
   variants: [
     {
       props: { size: 'large' },
@@ -32,10 +37,12 @@ export const PigmentCard = () => {
   console.log('tokens:', tokens);
 
   return (
-    <div className="card">
+    <Card>
       <Title color="red" size="large">Card Title</Title>
-      <Title color="red" size="small">Card Title</Title>
-      <p>This is a simple card component.</p>
-    </div>
+      <Title color="red" size="small">Card Subtitle</Title>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nesciunt!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nesciunt!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nesciunt!</p>
+    </Card>
   );
 };

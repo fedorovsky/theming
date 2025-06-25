@@ -44,7 +44,7 @@
     "vite-plugin-lib-inject-css": "^2.0.1"
   },
   "dependencies": {
-    "@fedorovskyi/theme": "^1.0.6",
+    "@fedorovskyi/theme": "^1.0.7",
     "@linaria/core": "^6.3.0",
     "@linaria/react": "^6.3.0",
     "@pigment-css/react": "^0.0.30"
