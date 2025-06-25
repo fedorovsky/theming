@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@fedorovskyi/theme": "^1.0.7",
-    "@fedorovskyi/ui-kit": "^1.0.3",
+    "@fedorovskyi/ui-kit": "^1.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

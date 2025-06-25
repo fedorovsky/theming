@@ -1,6 +1,6 @@
 {
   "name": "@fedorovskyi/ui-kit",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "ui-kit",
   "main": "./dist/index.es.js",
   "module": "./dist/index.es.js",

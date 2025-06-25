@@ -20,14 +20,12 @@ const Title = styled('h2')<{
       props: { size: 'large' },
       style: {
         fontSize: '32px',
-        padding: '1rem',
       },
     },
     {
       props: { size: 'small' },
       style: {
         fontSize: '16px',
-        padding: '0.5rem',
       },
     },
   ],
