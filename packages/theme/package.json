@@ -9,6 +9,7 @@
   "exports": {
     ".": {
       "import": "./dist/tokens.js",
+      "require": "./dist/tokens.cjs.js",
       "types": "./dist/tokens.d.ts"
     },
     "./theme.css": "./dist/theme.css"
