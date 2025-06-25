@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fedorovskyi/theme": "^1.0.5",
-    "@fedorovskyi/ui-kit": "^1.0.1",
+    "@fedorovskyi/theme": "^1.0.7",
+    "@fedorovskyi/ui-kit": "^1.0.7",
     "@pigment-css/react": "^0.0.30",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
