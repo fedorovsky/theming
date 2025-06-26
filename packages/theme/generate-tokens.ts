@@ -40,14 +40,19 @@ function buildTokens(obj: ThemeObject, prefix: string[] = []): TokenObject {
         const varName = `--${newPrefix.join('-')}`;
         return [key, `var(${varName})`];
       }
-    })
+    }),
   ) as TokenObject;
 }
 
-// Генерируем токены из темы
-const tokens: TokenObject = buildTokens(themeLight);
+// Убираем поле `name` из исходной темы перед генерацией токенов
+const { name, ...themeWithoutName } = themeLight;
 
-// Формируем содержимое выходного файла
+// Генерируем токены из темы без `name`
+const tokens: TokenObject = buildTokens(themeWithoutName);
+
+/**
+ * Формируем содержимое выходного файла
+ */
 const tsContent = `export const tokens = ${JSON.stringify(tokens, null, 2)} as const;
 
 export type Tokens = typeof tokens;

@@ -54,6 +54,7 @@ const colors = {
 };
 
 export const themeLight = {
+  name: 'light',
   colors: {
     ...colors.neutral,
     ...colors.primary,

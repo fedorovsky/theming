@@ -7,62 +7,67 @@ import { themeLight } from './src/themeLight';
 import { themeDark } from './src/themeDark';
 
 /**
+ * Тип для вложенных свойств темы (без поля name)
+ */
+type NestedTheme = {
+  [key: string]: string | NestedTheme;
+};
+
+/**
+ * Тип для объекта темы с названием
+ */
+interface Theme {
+  name: string;
+  [key: string]: string | NestedTheme;
+}
+
+/**
+ * Массив доступных тем, чтобы легко добавлять новые
+ */
+const themes: Theme[] = [
+  themeLight,
+  themeDark,
+  // Добавляйте сюда новые темы
+];
+
+/**
  * В ESM-модулях нет __dirname, получаем его так:
  */
 const __filename: string = fileURLToPath(import.meta.url);
 const __dirname: string = path.dirname(__filename);
 
 /**
- * Тип для вложенного объекта темы
- */
-type ThemeObject = {
-  [key: string]: string | ThemeObject;
-};
-
-/**
  * Рекурсивно строит массив строк CSS custom properties
  */
-function buildLines(obj: ThemeObject, prefix: string[] = []): string[] {
+function buildLines(obj: NestedTheme, prefix: string[] = []): string[] {
   return Object.entries(obj).flatMap(([key, val]) => {
     const pathKeys = [...prefix, key];
     if (val !== null && typeof val === 'object') {
-      // рекурсивно погружаемся в вложенный объект
-      return buildLines(val as ThemeObject, pathKeys);
+      return buildLines(val, pathKeys);
     }
-    // составляем строку вида "--parent-child: value;"
     return [`  --${pathKeys.join('-')}: ${val};`];
   });
 }
 
 /**
- * Генерация CSS для светлой темы
+ * Генерация CSS для заданной темы с динамическим именем
  */
-const lightCssLines: string[] = buildLines(themeLight);
-const lightCss = [
-  `[data-theme="light"] {`,
-  ...lightCssLines,
-  `}`
-].join('\n');
+function generateCss(theme: Theme): string {
+  const { name, ...vars } = theme;
+  const lines = buildLines(vars as NestedTheme);
+  return [`[data-theme="${name}"] {`, ...lines, `}`].join('\n');
+}
 
 /**
- * Генерация CSS для тёмной темы
+ * Генерируем CSS для всех тем и объединяем
  */
-const darkCssLines: string[] = buildLines(themeDark);
-const darkCss = [
-  `[data-theme="dark"] {`,
-  ...darkCssLines,
-  `}`
-].join('\n');
-
-/**
- * Объединяем оба блока в итоговый CSS
- */
-const outputCss: string = `${lightCss}\n\n${darkCss}\n`;
+const cssBlocks = themes.map(generateCss).join('\n\n');
+const outputCss = `${cssBlocks}\n`;
 
 /**
  * Путь для записи файла
  */
-const outPath: string = path.resolve(__dirname, 'out', 'theme.css');
+const outPath = path.resolve(__dirname, 'out', 'theme.css');
 
 /**
  * Убедимся, что директория существует (рекурсивно)
